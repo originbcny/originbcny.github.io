@@ -36,7 +36,7 @@
 
 		// skelJS (probably don't need to change anything here unless you know what you're doing)
 			skelJS: {
-				prefix: 'http://originbcny.github/Web/css/style',
+				prefix: 'http://originbcny.github.io/Web/css/style',
 				resetCSS: true,
 				boxModel: 'border',
 				grid: {
