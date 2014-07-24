@@ -412,6 +412,11 @@
 
 	/* Sections/Articles */
 	
+	article#home .container  {
+			
+			padding-top:3em;
+	}
+	
 		section,
 		article
 		{
