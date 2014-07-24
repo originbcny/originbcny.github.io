@@ -7,6 +7,7 @@
 }
 
 #entries p{
+	display:none;
 	text-align:left;
 	line-height:1.3em;
 }
@@ -18,6 +19,7 @@
 	max-width:100%;
 }
 #entries2 p{
+	display:none;
 	text-align:left;
 	line-height:1.3em;
 }
