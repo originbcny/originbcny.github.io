@@ -1490,6 +1490,18 @@ z-index:1001;
 		padding: 2em 0 2em 0;
 	}
 
+	.carousel:before
+	{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: url('https://dl.dropboxusercontent.com/s/ka410249lgm3abf/overlay.png');
+		opacity: 0.03;
+	}
+	
 		.carousel .forward,
 		.carousel .backward
 		{
