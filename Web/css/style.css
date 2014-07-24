@@ -6,6 +6,24 @@
 	max-width:100%;
 }
 
+#entries p{
+	text-align:left;
+	line-height:1.3em;
+}
+
+#entries h2{
+	font-size:small;
+}
+#entries2 img {
+	max-width:100%;
+}
+#entries2 p{
+	text-align:left;
+	line-height:1.3em;
+}
+
+#entries2 h2{
+	font-size:small;
 /*
 	Helios 1.5 by HTML5 UP
 	html5up.net | @n33co
