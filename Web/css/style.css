@@ -412,7 +412,7 @@
 
 	/* Sections/Articles */
 	
-	article#home .container  {
+	article #home  {
 			
 			padding-top:3em;
 	}
