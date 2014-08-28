@@ -82,7 +82,7 @@
 display: initial;
 }
 .view-third .mask {
-  display: initial;
+  display: none;
 }
 .view-third h2 {
 display: initial;
