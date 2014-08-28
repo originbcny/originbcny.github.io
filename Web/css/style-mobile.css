@@ -87,7 +87,9 @@
    -ms-transition: all 0.2s ease-in;
    transition: all 0.2s ease-in;
 }
+
 .view-third .mask {
+	display:initial;
    -webkit-transform: none;
    -moz-transform: none;
    -o-transform: none;
