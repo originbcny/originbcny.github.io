@@ -89,7 +89,8 @@
 }
 
 .view-third .mask {
-	display:initial;
+background-color:initial;
+opacity:1;
    -webkit-transform: none;
    -moz-transform: none;
    -o-transform: none;
