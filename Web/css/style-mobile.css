@@ -76,34 +76,81 @@
    box-shadow: 0 0 1px #000;
 }
 .view a.info: hover {
-
+   -webkit-box-shadow: 0 0 5px #000;
+   -moz-box-shadow: 0 0 5px #000;
+   box-shadow: 0 0 5px #000;
 }
 .view-third img {
-display: initial;
+   -webkit-transition: all 0.2s ease-in;
+   -moz-transition: all 0.2s ease-in;
+   -o-transition: all 0.2s ease-in;
+   -ms-transition: all 0.2s ease-in;
+   transition: all 0.2s ease-in;
 }
 .view-third .mask {
-  display: none;
+   -webkit-transform: none;
+   -moz-transform: none;
+   -o-transform: none;
+   -ms-transform: none;
+   transform: none;
+
 }
 .view-third h2 {
-display: initial;
+   -webkit-transform: none;
+   -moz-transform: none;
+   -o-transform: none;
+   -ms-transform: none;
+   transform: none;
+
 }
 .view-third p {
+   -webkit-transform: none;
+   -moz-transform: none;
+   -o-transform: none;
+   -ms-transform: none;
+   transform: none;
 
 }
 .view-third a.info {
- 
+   -webkit-transform: none;
+   -moz-transform: none;
+   -o-transform: none;
+   -ms-transform: none;
+   transform: none;
+
 }
 .view-third:hover .mask {
+   -webkit-transform: none;
+   -moz-transform: none;
+   -o-transform: none;
+   -ms-transform: none;
+   transform: none;
 
 }
 .view-third:hover h2  {
-
-
-.view-third:hover p {
+   -webkit-transform: none;
+   -moz-transform: none;
+   -o-transform: none;
+   -ms-transform: none;
+   transform: none;
 
 }
-.view-third:hover a.info {
 
+.view-third:hover p {
+   -webkit-transform: none;
+   -moz-transform: none;
+   -o-transform: none;
+   -ms-transform: none;
+   transform: none;
+ 
+}
+.view-third:hover a.info {
+   -webkit-transform: none;
+   -moz-transform: none;
+   -o-transform: none;
+   -ms-transform: none;
+   transform: none;
+  
 }
 
 	body,input,textarea,select
