@@ -45,11 +45,11 @@
    font-size: 17px;
    
    background: rgba(0, 0, 0, 0.5);
-   margin: 23px 10px;
+   margin: 23px 0px;
 }
 .view h3 {
    text-transform: uppercase;
-   color: #fff;
+   color: #A52A2A;
    text-align: center;
    position: relative;
    font-size: 13px;
