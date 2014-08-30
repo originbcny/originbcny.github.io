@@ -52,6 +52,9 @@
    font-size: 23px;
  
 }
+.view h5{
+	color: #E3EE62;
+}
 .view p {
    font-family: Georgia, serif;
    font-style: italic;
