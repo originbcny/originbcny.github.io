@@ -7,7 +7,8 @@
 /*********************************************************************************/
 /* Settings                                                                      */
 /*********************************************************************************/
-var $ff = jQuery.noConflict(); $ff(function()
+var $f = jQuery.noConflict(); $f(function()
+	
 	var helios_settings = {
 
 		// Header (homepage only)
