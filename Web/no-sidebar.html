@@ -17,6 +17,10 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
+
+	<script src="AnimatedResponsiveImageGrid/js/modernizr.custom.26633.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="AnimatedResponsiveImageGrid/css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -27,16 +31,16 @@
 	</head>
 	<body class="no-sidebar">
 
-		<!-- Header -->
+<!--		 Header 
 			<div id="header">
 
-				<!-- Inner -->
+				Inner 
 					<div class="inner">
 						<header>
 							<h1><a href="#" id="logo">Helios</a></h1>
 						</header>
 					</div>
-				
+				-->
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
@@ -75,12 +79,41 @@
 						<div class="12u skel-cell-important" id="content">
 							<article id="main" class="special">
 								<header>
-									<h2><a href="#">No Sidebar</a></h2>
+									<h2><a href="#">Services</a></h2>
 									<span class="byline">
 										Morbi convallis lectus malesuada sed fermentum dolore amet
 									</span>
 								</header>
-								<a href="http://mdomaradzki.deviantart.com/art/Planet-Bronte-339258500" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
+				<div id="ri-grid" class="ri-grid ri-grid-size-1 ri-shadow">
+					<img class="ri-loading-image" src="AnimatedResponsiveImageGrid/images/loading.gif"/>
+					<ul>
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics40.jpg" alt="Grid Pics40"></a></li>
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics39.jpg" alt="Grid Pics40"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics38.jpg" alt="Grid Pics40"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics37.jpg" alt="Grid Pics40"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics36.jpg" alt="Grid Pics40"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics35.jpg" alt="Grid Pics40"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics34.jpg" alt="Grid Pics34"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics33.jpg" alt="Grid Pics33"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics32.jpg" alt="Grid Pics32"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics31.jpg" alt="Grid Pics31"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics30.jpg" alt="Grid Pics30"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics29.jpg" alt="Grid Pics29"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics28.jpg" alt="Grid Pics28"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics27.jpg" alt="Grid Pics27"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics26.jpg" alt="Grid Pics26"></a></li>		
+					</ul>
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics25.jpg" alt="Grid Pics25"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics24.jpg" alt="Grid Pics24"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics23.jpg" alt="Grid Pics23"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics22.jpg" alt="Grid Pics22"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics21.jpg" alt="Grid Pics21"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics20.jpg" alt="Grid Pics20"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics19.jpg" alt="Grid Pics19"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics18.jpg" alt="Grid Pics18"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics17.jpg" alt="Grid Pics17"></a></li>	
+					<li><a href="#"><img src="AnimatedResponsiveImageGrid/images/grid/grid_pics16.jpg" alt="Grid Pics16"></a></li>	25
+				</div>
 								<p>
 									Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa 
 									posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus 
@@ -301,6 +334,23 @@
 					</div>
 				</div>
 			</div>
+			 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+				<script type="text/javascript" src="AnimatedResponsiveImageGrid/js/jquery.gridrotator.js"></script>
+				<script type="text/javascript">	
+					$(function() {
 
+						$( '#ri-grid' ).gridrotator( {
+							w320 : {
+								rows : 3,
+								columns : 4
+							},
+							w240 : {
+								rows : 3,
+								columns : 3
+							}
+						} );
+
+					});
+				</script>
 	</body>
 </html>
