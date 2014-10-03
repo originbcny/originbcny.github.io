@@ -7,7 +7,7 @@
 /*********************************************************************************/
 /* Settings                                                                      */
 /*********************************************************************************/
-
+var $ff = jQuery.noConflict(); $ff(function()
 	var helios_settings = {
 
 		// Header (homepage only)
@@ -103,33 +103,33 @@
 
 	// preloadImage
 		jQuery.n33_preloadImage = function(url, onload) {
-			var	$img = $('<img />'),
-				_IEVersion = (navigator.userAgent.match(/MSIE ([0-9]+)\./) ? parseInt(RegExp.$1) : 99);
+			var	$fimg = $f('<img />'),
+				_IEVersion = (navigator.userAgent.match(/MSIE ([0-9]+)\./) ? parseInt(RegExp.$f1) : 99);
 			
-			$img.attr('src', url);
+			$fimg.attr('src', url);
 			
-			if ($img.get(0).complete
+			if ($fimg.get(0).complete
 			||	_IEVersion < 9)
 				(onload)();
 			else
-				$img.load(onload);
+				$fimg.load(onload);
 		};
 
 	// formerize
-		jQuery.fn.n33_formerize=function(){var _fakes=new Array(),_form = jQuery(this);_form.find('input[type=text],textarea').each(function() { var e = jQuery(this); if (e.val() == '' || e.val() == e.attr('placeholder')) { e.addClass('formerize-placeholder'); e.val(e.attr('placeholder')); } }).blur(function() { var e = jQuery(this); if (e.attr('name').match(/_fakeformerizefield$/)) return; if (e.val() == '') { e.addClass('formerize-placeholder'); e.val(e.attr('placeholder')); } }).focus(function() { var e = jQuery(this); if (e.attr('name').match(/_fakeformerizefield$/)) return; if (e.val() == e.attr('placeholder')) { e.removeClass('formerize-placeholder'); e.val(''); } }); _form.find('input[type=password]').each(function() { var e = jQuery(this); var x = jQuery(jQuery('<div>').append(e.clone()).remove().html().replace(/type="password"/i, 'type="text"').replace(/type=password/i, 'type=text')); if (e.attr('id') != '') x.attr('id', e.attr('id') + '_fakeformerizefield'); if (e.attr('name') != '') x.attr('name', e.attr('name') + '_fakeformerizefield'); x.addClass('formerize-placeholder').val(x.attr('placeholder')).insertAfter(e); if (e.val() == '') e.hide(); else x.hide(); e.blur(function(event) { event.preventDefault(); var e = jQuery(this); var x = e.parent().find('input[name=' + e.attr('name') + '_fakeformerizefield]'); if (e.val() == '') { e.hide(); x.show(); } }); x.focus(function(event) { event.preventDefault(); var x = jQuery(this); var e = x.parent().find('input[name=' + x.attr('name').replace('_fakeformerizefield', '') + ']'); x.hide(); e.show().focus(); }); x.keypress(function(event) { event.preventDefault(); x.val(''); }); });  _form.submit(function() { jQuery(this).find('input[type=text],input[type=password],textarea').each(function(event) { var e = jQuery(this); if (e.attr('name').match(/_fakeformerizefield$/)) e.attr('name', ''); if (e.val() == e.attr('placeholder')) { e.removeClass('formerize-placeholder'); e.val(''); } }); }).bind("reset", function(event) { event.preventDefault(); jQuery(this).find('select').val(jQuery('option:first').val()); jQuery(this).find('input,textarea').each(function() { var e = jQuery(this); var x; e.removeClass('formerize-placeholder'); switch (this.type) { case 'submit': case 'reset': break; case 'password': e.val(e.attr('defaultValue')); x = e.parent().find('input[name=' + e.attr('name') + '_fakeformerizefield]'); if (e.val() == '') { e.hide(); x.show(); } else { e.show(); x.hide(); } break; case 'checkbox': case 'radio': e.attr('checked', e.attr('defaultValue')); break; case 'text': case 'textarea': e.val(e.attr('defaultValue')); if (e.val() == '') { e.addClass('formerize-placeholder'); e.val(e.attr('placeholder')); } break; default: e.val(e.attr('defaultValue')); break; } }); window.setTimeout(function() { for (x in _fakes) _fakes[x].trigger('formerize_sync'); }, 10); }); return _form; };
+		jQuery.fn.n33_formerize=function(){var _fakes=new Array(),_form = jQuery(this);_form.find('input[type=text],textarea').each(function() { var e = jQuery(this); if (e.val() == '' || e.val() == e.attr('placeholder')) { e.addClass('formerize-placeholder'); e.val(e.attr('placeholder')); } }).blur(function() { var e = jQuery(this); if (e.attr('name').match(/_fakeformerizefield$f/)) return; if (e.val() == '') { e.addClass('formerize-placeholder'); e.val(e.attr('placeholder')); } }).focus(function() { var e = jQuery(this); if (e.attr('name').match(/_fakeformerizefield$f/)) return; if (e.val() == e.attr('placeholder')) { e.removeClass('formerize-placeholder'); e.val(''); } }); _form.find('input[type=password]').each(function() { var e = jQuery(this); var x = jQuery(jQuery('<div>').append(e.clone()).remove().html().replace(/type="password"/i, 'type="text"').replace(/type=password/i, 'type=text')); if (e.attr('id') != '') x.attr('id', e.attr('id') + '_fakeformerizefield'); if (e.attr('name') != '') x.attr('name', e.attr('name') + '_fakeformerizefield'); x.addClass('formerize-placeholder').val(x.attr('placeholder')).insertAfter(e); if (e.val() == '') e.hide(); else x.hide(); e.blur(function(event) { event.preventDefault(); var e = jQuery(this); var x = e.parent().find('input[name=' + e.attr('name') + '_fakeformerizefield]'); if (e.val() == '') { e.hide(); x.show(); } }); x.focus(function(event) { event.preventDefault(); var x = jQuery(this); var e = x.parent().find('input[name=' + x.attr('name').replace('_fakeformerizefield', '') + ']'); x.hide(); e.show().focus(); }); x.keypress(function(event) { event.preventDefault(); x.val(''); }); });  _form.submit(function() { jQuery(this).find('input[type=text],input[type=password],textarea').each(function(event) { var e = jQuery(this); if (e.attr('name').match(/_fakeformerizefield$f/)) e.attr('name', ''); if (e.val() == e.attr('placeholder')) { e.removeClass('formerize-placeholder'); e.val(''); } }); }).bind("reset", function(event) { event.preventDefault(); jQuery(this).find('select').val(jQuery('option:first').val()); jQuery(this).find('input,textarea').each(function() { var e = jQuery(this); var x; e.removeClass('formerize-placeholder'); switch (this.type) { case 'submit': case 'reset': break; case 'password': e.val(e.attr('defaultValue')); x = e.parent().find('input[name=' + e.attr('name') + '_fakeformerizefield]'); if (e.val() == '') { e.hide(); x.show(); } else { e.show(); x.hide(); } break; case 'checkbox': case 'radio': e.attr('checked', e.attr('defaultValue')); break; case 'text': case 'textarea': e.val(e.attr('defaultValue')); if (e.val() == '') { e.addClass('formerize-placeholder'); e.val(e.attr('placeholder')); } break; default: e.val(e.attr('defaultValue')); break; } }); window.setTimeout(function() { for (x in _fakes) _fakes[x].trigger('formerize_sync'); }, 10); }); return _form; };
 
 	// onVisible
 		(function() {
 		
 			// Vars
-				var $window = jQuery(window),
+				var $fwindow = jQuery(window),
 					elements = [],
 					delay = 10,
 					pad = 0,
 					timerId,
 					poll = function() {
 						var l = elements.length,
-							x = $window.scrollTop() + $window.height(),
+							x = $fwindow.scrollTop() + $fwindow.height(),
 							i, e;
 					
 						for (i=0; i < l; i++)
@@ -145,9 +145,9 @@
 					};
 
 			// Event bindings
-				$window.load(function() {
+				$fwindow.load(function() {
 
-					$window.on('scroll resize', function() {
+					$fwindow.on('scroll resize', function() {
 
 						// Clear existing timeout (if one exists)
 							window.clearTimeout(timerId);
@@ -169,37 +169,37 @@
 // Ready stuff
 	jQuery(function() {
 
-		var $window = $(window),
-			$body = $('body'),
-			$header = $('#header'),
-			_IEVersion = (navigator.userAgent.match(/MSIE ([0-9]+)\./) ? parseInt(RegExp.$1) : 99),
+		var $fwindow = $f(window),
+			$fbody = $f('body'),
+			$fheader = $f('#header'),
+			_IEVersion = (navigator.userAgent.match(/MSIE ([0-9]+)\./) ? parseInt(RegExp.$f1) : 99),
 			_isTouch = !!('ontouchstart' in window),
 			_isMobile = !!(navigator.userAgent.match(/(iPod|iPhone|iPad|Android|IEMobile)/));
 
 		// Pause CSS transitions until the page has loaded (prevents "flickering")
-			$body.addClass('paused');
-			$window.load(function() {
-				$body.removeClass('paused');
+			$fbody.addClass('paused');
+			$fwindow.load(function() {
+				$fbody.removeClass('paused');
 			});
 
 		// Add input "placeholder" support to IE <= 9
 			if (_IEVersion < 10)
-				$('form').n33_formerize();
+				$f('form').n33_formerize();
 
 		// Initialize scrolly links
-			$('.scrolly').n33_scrolly();
+			$f('.scrolly').n33_scrolly();
 
 		// Initialize dropotron
-			$('#nav > ul').dropotron(helios_settings.dropotron);
+			$f('#nav > ul').dropotron(helios_settings.dropotron);
 
 		// Initialize carousels
-			$('.carousel').each(function() {
+			$f('.carousel').each(function() {
 				
-				var	$t = $(this),
-					$forward = $('<span class="forward"></span>'),
-					$backward = $('<span class="backward"></span>'),
-					$reel = $t.children('.reel'),
-					$items = $reel.children('article');
+				var	$ft = $f(this),
+					$fforward = $f('<span class="forward"></span>'),
+					$fbackward = $f('<span class="backward"></span>'),
+					$freel = $ft.children('.reel'),
+					$fitems = $freel.children('article');
 				
 				var	pos = 0,
 					leftLimit,
@@ -211,19 +211,19 @@
 				// Items
 					if (helios_settings.carousels.fadeIn)
 					{
-						$items.addClass('loading');
+						$fitems.addClass('loading');
 
-						$t.n33_onVisible(function() {
+						$ft.n33_onVisible(function() {
 							var	timerId,
-								limit = $items.length - Math.ceil($window.width() / itemWidth);
+								limit = $fitems.length - Math.ceil($fwindow.width() / itemWidth);
 							
 							timerId = window.setInterval(function() {
-								var x = $items.filter('.loading'), xf = x.first();
+								var x = $fitems.filter('.loading'), xf = x.first();
 								
 								if (x.length <= limit)
 								{
 									window.clearInterval(timerId);
-									$items.removeClass('loading');
+									$fitems.removeClass('loading');
 									return;
 								}
 								
@@ -242,21 +242,21 @@
 					}
 				
 				// Main
-					$t._update = function() {
+					$ft._update = function() {
 						pos = 0;
-						rightLimit = (-1 * reelWidth) + $window.width();
+						rightLimit = (-1 * reelWidth) + $fwindow.width();
 						leftLimit = 0;
-						$t._updatePos();
+						$ft._updatePos();
 					};
 				
 					if (_IEVersion < 9)
-						$t._updatePos = function() { $reel.css('left', pos); };
+						$ft._updatePos = function() { $freel.css('left', pos); };
 					else
-						$t._updatePos = function() { $reel.css('transform', 'translate(' + pos + 'px, 0)'); };
+						$ft._updatePos = function() { $freel.css('transform', 'translate(' + pos + 'px, 0)'); };
 					
 				// Forward
-					$forward
-						.appendTo($t)
+					$fforward
+						.appendTo($ft)
 						.hide()
 						.mouseenter(function(e) {
 							timerId = window.setInterval(function() {
@@ -268,7 +268,7 @@
 									pos = rightLimit;
 								}
 								
-								$t._updatePos();
+								$ft._updatePos();
 							}, 10);
 						})
 						.mouseleave(function(e) {
@@ -276,8 +276,8 @@
 						});
 				
 				// Backward	
-					$backward
-						.appendTo($t)
+					$fbackward
+						.appendTo($ft)
 						.hide()
 						.mouseenter(function(e) {
 							timerId = window.setInterval(function() {
@@ -289,7 +289,7 @@
 									pos = leftLimit;
 								}
 								
-								$t._updatePos();
+								$ft._updatePos();
 							}, 10);
 						})
 						.mouseleave(function(e) {
@@ -297,36 +297,36 @@
 						});
 						
 				// Init
-					$window.load(function() {
+					$fwindow.load(function() {
 
-						reelWidth = $reel[0].scrollWidth;
+						reelWidth = $freel[0].scrollWidth;
 
 						skel.onStateChange(function() {
 				
 							if (_isTouch)
 							{
-								$reel
+								$freel
 									.css('overflow-y', 'hidden')
 									.css('overflow-x', 'scroll')
 									.scrollLeft(0);
-								$forward.hide();
-								$backward.hide();
+								$fforward.hide();
+								$fbackward.hide();
 							}
 							else
 							{
-								$reel
+								$freel
 									.css('overflow', 'visible')
 									.scrollLeft(0);
-								$forward.show();
-								$backward.show();
+								$fforward.show();
+								$fbackward.show();
 							}
 
-							$t._update();
+							$ft._update();
 						});
 
-						$window.resize(function() {
-							reelWidth = $reel[0].scrollWidth;
-							$t._update();
+						$fwindow.resize(function() {
+							reelWidth = $freel[0].scrollWidth;
+							$ft._update();
 						}).trigger('resize');
 
 					});
@@ -338,21 +338,21 @@
 			// Mobile devices don't do so well with fixed backgrounds and the fullscreen header :/
 				if (_isMobile)
 				{
-					$header.css('background-attachment', 'scroll');
+					$fheader.css('background-attachment', 'scroll');
 					helios_settings.header.fullScreen = false;
 				}
 
 			// Homepage header
-				if ($body.hasClass('homepage'))
+				if ($fbody.hasClass('homepage'))
 				{
 					if (helios_settings.header.fullScreen)
 					{
-						$window.bind('resize.helios', function() {
+						$fwindow.bind('resize.helios', function() {
 							window.setTimeout(function() {
-								var s = $header.children('.inner');
-								var sh = s.outerHeight(), hh = $window.height(), h = Math.ceil((hh - sh) / 2) + 1;
+								var s = $fheader.children('.inner');
+								var sh = s.outerHeight(), hh = $fwindow.height(), h = Math.ceil((hh - sh) / 2) + 1;
 
-								$header
+								$fheader
 									.css('padding-top', h)
 									.css('padding-bottom', h);
 							}, 0);
@@ -361,19 +361,19 @@
 
 					if (helios_settings.header.fadeIn)
 					{
-						$('<div class="overlay" />').appendTo($header);
+						$f('<div class="overlay" />').appendTo($fheader);
 						
-						$window
+						$fwindow
 							.load(function() {
-								var imageURL = $header.css('background-image').replace(/"/g,"").replace(/url\(|\)$/ig, "");
+								var imageURL = $fheader.css('background-image').replace(/"/g,"").replace(/url\(|\)$f/ig, "");
 
-								$.n33_preloadImage(imageURL, function() {
+								$f.n33_preloadImage(imageURL, function() {
 									
 									if (_IEVersion < 10)
-										$header.children('.overlay').fadeOut(2000);
+										$fheader.children('.overlay').fadeOut(2000);
 									else
 										window.setTimeout(function() {
-											$header.addClass('ready');
+											$ffheader.addClass('ready');
 										}, helios_settings.header.fadeDelay);
 								
 								});
@@ -382,4 +382,5 @@
 
 				}
 
+	});
 	});
