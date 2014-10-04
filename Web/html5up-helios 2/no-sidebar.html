@@ -359,7 +359,8 @@
 				<script type="text/javascript" src="js/jquery.gridrotator.js"></script>
 			
 				<script type="text/javascript">	
-					$.noConflict();
+					jQuery.noConflict();
+					(function( $ ) {
 					$(function() {
 
 						$( '#ri-grid' ).gridrotator( {
@@ -390,6 +391,7 @@
 						} );
 
 					});
+					})(jQuery);
 				</script>
 			
 				
