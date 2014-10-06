@@ -31,44 +31,19 @@
 	</head>
 	<body class="no-sidebar">
 
-		<!-- Header -->
-			<div id="header">
-
-				<!-- Inner -->
-					<div class="inner">
-						<header>
-							<h1><a href="index.html" id="logo">Helios</a></h1>
-						</header>
-					</div>
-				
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="">Dropdown</a>
-								<ul>
-									<li><a href="#">Lorem ipsum dolor</a></li>
-									<li><a href="#">Magna phasellus</a></li>
-									<li><a href="#">Etiam dolore nisl</a></li>
-									<li>
-										<a href="">And a submenu &hellip;</a>
-										<ul>
-											<li><a href="#">Lorem ipsum dolor</a></li>
-											<li><a href="#">Phasellus consequat</a></li>
-											<li><a href="#">Magna phasellus</a></li>
-											<li><a href="#">Etiam dolore nisl</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Veroeros feugiat</a></li>
-								</ul>
-							</li>
-							<li><a href="left-sidebar.html">Left Sidebar</a></li>
-							<li><a href="right-sidebar.html">Right Sidebar</a></li>
-							<li><a href="no-sidebar.html">No Sidebar</a></li>
-						</ul>
-					</nav>
-
+		<!-- Nav -->
+	        <header class="logo">
+	          <a href="#"><img src="https://dl.dropboxusercontent.com/s/9n2t34buhs14tpl/BC_head90.png"></a>
+	        </header>
+	        <nav id="nav">
+			<ul>
+	           <li><a href="/" alt="Home">Home</a></li>
+			   <li {% if page.full_url contains '/products' or page.full_url contains '/product/' or page.full_url contains '/category/' or page.full_url contains '/artist/' %}class="selected"{% endif %}><a href="/products">Store</a></li>{% for page in pages.all limit:2 %}{% endfor %}<li><a href="http://bclives.com">BClives</a></li>
+	                    <li><a href="http://originbcny.com/services">Services</a></li>
+	                     <li {% if page.full_url contains '/contact' %}class="selected"{% endif %}><a href="/contact">Contact</a></li>
+	                      <li {% if page.full_url contains '/cart' %}class="selected"{% endif %}><a href="/cart">Cart</a></li>
+			</ul>
+	        </nav>
 			</div>
 			
 		<!-- Main -->
