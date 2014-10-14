@@ -1431,10 +1431,16 @@
 	
 #nav > ul > li.highlight > a
 	{
-	color:#000000;
+	color:#513333;
 	z-index:100;
 }	
 	
+b#bolder
+{
+	font-size: 1.2em;
+	font-weight: 400;
+	color: #FFEC84;
+}	
 	
 	#nav > ul
 	{
