@@ -1462,7 +1462,7 @@ z-index:1001;
 	
 	
 	#nav > ul > li > a
-				{
+				{ border:none;
 					border-radius: 5px;
 					color: #fff;
 					text-decoration: none;
