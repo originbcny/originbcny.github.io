@@ -284,13 +284,7 @@
 		margin: 0 0 0.25em 0;
 	}
 	
-	.byline
-	{
-		display: block;
-		font-size: 1.5em;
-		margin-top: 1em;
-		line-height: 1.5em;
-	}
+	
 
 	strong, b
 	{
@@ -357,20 +351,6 @@
 		clear: both;
 	}
 	
-	header
-	{
-		margin: 0 0 1em 0;
-	}
-	
-		header .byline
-		{
-			margin-bottom: 2em;
-		}
-		
-	footer
-	{
-		margin: 2.5em 0 0 0;
-	}
 		
 	hr
 	{
@@ -451,7 +431,41 @@
 		{
 			text-align: center;
 		}
+		
+		.byline
+		{
+			display: block;
+			font-size: 1.5em;
+			margin-top: 1em;
+			line-height: 1.5em;
+		}
 
+		header
+		{
+			margin: 0 0 1em 0;
+		}
+
+			header .byline
+			{
+				margin-bottom: 2em;
+			}
+
+	
+		
+			header > p
+			{
+				display: block;
+				font-size: 1.5em;
+				margin: 1em 0 2em 0;
+				line-height: 1.5em;
+				text-align: inherit;
+			}
+
+				footer
+				{
+					margin: 2.5em 0 0 0;
+				}
+				
 	/* Images */
 
 		.image
