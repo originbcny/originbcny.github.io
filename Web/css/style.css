@@ -1429,6 +1429,12 @@
 		opacity: 0.03;
 	}
 	
+#nav ul li.highlight
+	{
+	color:#000000;
+}	
+	
+	
 	#nav > ul
 	{
 		line-height: 0px;
