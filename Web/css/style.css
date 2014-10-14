@@ -1429,9 +1429,9 @@
 		opacity: 0.03;
 	}
 	
-li.highlight > a
+#nav > ul > li.highlight > a
 	{
-	color: #000000;
+	color:#000000;
 }	
 	
 	
